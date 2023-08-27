@@ -21,7 +21,7 @@ export const NavigationBar = () => {
         <Grid item xs={3}></Grid>
         <Grid item xs={6}>
           <Box sx={{ display: "flex", justifyContent: "space-around" }}>
-            <Link to="about" smooth={true} offset={-430} duration={500}>
+            <Link to="about" smooth={true} offset={-75} duration={500}>
               <Typography>About</Typography>
             </Link>
             <Link to="project" smooth={true} offset={-430} duration={500}>
