@@ -19,6 +19,7 @@ export const HomePage = () => {
         width: "100%",
         minHeight: "100vh",
       }}
+      id="home"
     >
       <Grid container>
         <Grid item xs={4}>

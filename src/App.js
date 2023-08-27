@@ -1,12 +1,10 @@
 import "./App.css";
-import { NavigationBar } from "./components/navigationbar";
-import { HomePage } from "./page/homepage";
+import Route from "./routes/route";
 
 function App() {
   return (
     <>
-      <NavigationBar />
-      <HomePage />
+      <Route></Route>
     </>
   );
 }
