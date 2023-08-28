@@ -87,6 +87,7 @@ export const AboutPage = () => {
         sx={{
           height: "50vh",
           backgroundImage: `url(${Assests.Tech.group_1})`,
+          pb: 2,
         }}
       >
         <Grid container>

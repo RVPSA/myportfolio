@@ -13,8 +13,8 @@ const Route = () => {
       <HomePage></HomePage>
       <AboutPage></AboutPage>
       <ProjectPage></ProjectPage>
-      <PublicationPage></PublicationPage>
-      <ContactPage></ContactPage>
+      {/* <PublicationPage></PublicationPage> */}
+      {/* <ContactPage></ContactPage> */}
     </>
   );
 };
