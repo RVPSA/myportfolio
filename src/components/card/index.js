@@ -1,7 +1,22 @@
 import { Box, Grow, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
+import { useAnimate, useInView } from "framer-motion";
 
-export const SkillCard = ({ children, title1, title2 }) => {
+export const SkillCard = ({ children, title1, title2, duration }) => {
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      animate(
+        scope.current,
+        { opacity: 1, x: [-1500, 0] },
+        { duration: duration, delay: 0.25, type: "spring" }
+      );
+      // console.log("IsinView value", isInView);
+    }
+  }, [isInView]);
+
   return (
     <Box>
       <Box
@@ -15,7 +30,9 @@ export const SkillCard = ({ children, title1, title2 }) => {
           alignItems: "center",
           padding: 3,
           boxShadow: "10px 10px 5px #858586",
+          opacity: 0,
         }}
+        ref={scope}
       >
         {children}
         <Typography sx={{ color: "white" }}>

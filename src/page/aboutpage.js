@@ -6,6 +6,7 @@ import ArchitectureIcon from "@mui/icons-material/Architecture";
 import { SkillCard } from "../components/card";
 import { Para } from "../components/para";
 import { Assests } from "../Assests/Images";
+import { Ball } from "../components/techBall";
 
 export const AboutPage = () => {
   return (
@@ -61,19 +62,19 @@ export const AboutPage = () => {
 
           <Grid item xs={1}></Grid>
           <Grid item xs={3}>
-            <SkillCard title1="Frontend" title2="Developer">
+            <SkillCard title1="Frontend" title2="Developer" duration={1}>
               <CodeIcon sx={{ fontSize: 50, color: "white" }}></CodeIcon>
             </SkillCard>
           </Grid>
           <Grid item xs={3}>
-            <SkillCard title1="Backend" title2="Developer">
+            <SkillCard title1="Backend" title2="Developer" duration={2}>
               <DataObjectIcon
                 sx={{ fontSize: 50, color: "white" }}
               ></DataObjectIcon>
             </SkillCard>
           </Grid>
           <Grid item xs={3}>
-            <SkillCard title1="UI/UX" title2="Designer">
+            <SkillCard title1="UI/UX" title2="Designer" duration={3}>
               <ArchitectureIcon
                 sx={{ fontSize: 50, color: "white" }}
               ></ArchitectureIcon>
@@ -87,7 +88,61 @@ export const AboutPage = () => {
           height: "50vh",
           backgroundImage: `url(${Assests.Tech.group_1})`,
         }}
-      ></Box>
+      >
+        <Grid container>
+          <Grid item xs={1}></Grid>
+          <Grid item xs={6}>
+            <Typography
+              sx={{
+                my: 3,
+                fontFamily: "Acme",
+                fontSize: 20,
+                fontStyle: "italic",
+              }}
+            >
+              Technologies
+            </Typography>
+          </Grid>
+          <Grid item xs={5}></Grid>
+          <Grid item xs={1}></Grid>
+          <Grid item>
+            <Ball>
+              <img src={Assests.Technologies.group_C} alt="c#"></img>
+            </Ball>
+          </Grid>
+
+          <Grid item>
+            <Ball>
+              <img src={Assests.Technologies.group_html} alt="c#"></img>
+            </Ball>
+          </Grid>
+
+          <Grid item>
+            <Ball>
+              <img src={Assests.Technologies.group_js} alt="c#"></img>
+            </Ball>
+          </Grid>
+
+          <Grid item>
+            <Ball>
+              <img src={Assests.Technologies.group_css} alt="c#"></img>
+            </Ball>
+          </Grid>
+
+          <Grid item>
+            <Ball>
+              <img src={Assests.Technologies.group_react} alt="c#"></img>
+            </Ball>
+          </Grid>
+
+          <Grid item>
+            <Ball>
+              <img src={Assests.Technologies.group_git} alt="c#"></img>
+            </Ball>
+          </Grid>
+          <Grid item xs={1}></Grid>
+        </Grid>
+      </Box>
     </>
   );
 };

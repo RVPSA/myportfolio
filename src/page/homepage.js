@@ -73,7 +73,7 @@ export const HomePage = () => {
             sx={{
               border: "1px",
               borderRadius: "100% 0% 0% 100% / 100% 30% 70% 0% ",
-              backgroundColor: "rgba(0, 0, 0, 0.5)",
+              backgroundColor: "rgba(0, 0, 0, 0.8)",
               height: "100vh",
               position: "relative",
               overflow: "hidden",
