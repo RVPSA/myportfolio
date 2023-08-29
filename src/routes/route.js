@@ -1,7 +1,7 @@
 import React from "react";
 import { NavigationBar } from "../components/navigationbar";
 import { AboutPage } from "../page/aboutpage";
-import { ProjectPage } from "../page/projectpage";
+import { ProjectPage } from "../page/projectPage/projectpage";
 import { PublicationPage } from "../page/publicationpage";
 import { ContactPage } from "../page/contactpage";
 import { HomePage } from "../page/homepage";

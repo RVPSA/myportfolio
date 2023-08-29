@@ -16,6 +16,7 @@ export const Stage = ({
 }) => {
   const [scope, animate] = useAnimate();
   const [scope1, animate1] = useAnimate();
+  const [scopeA, animateA] = useAnimate();
   const isInView = useInView(scope, { once: true });
 
   useEffect(() => {
@@ -29,6 +30,11 @@ export const Stage = ({
         scope1.current,
         { opacity: 1, x: [1500, 0] },
         { duration: duration, delay: 0.25, type: "spring" }
+      );
+      animateA(
+        scopeA.current,
+        { opacity: [0, 0.3, 0.5, 1] },
+        { duration: duration, delay: 0.25 }
       );
     }
   }, [isInView]);
@@ -63,7 +69,12 @@ export const Stage = ({
             }}
           >
             <Typography
-              sx={{ fontSize: 17, fontWeight: "bold", fontStyle: "italic" }}
+              sx={{
+                fontSize: 17,
+                fontWeight: "bold",
+                fontStyle: "italic",
+                color: "white",
+              }}
             >
               {titleL}
             </Typography>
@@ -71,7 +82,7 @@ export const Stage = ({
         )}
       </Grid>
 
-      <Grid item xs={1}>
+      <Grid item xs={1} ref={scopeA} sx={{ opacity: 0 }}>
         <Box
           sx={{
             display: "flex",
@@ -103,7 +114,7 @@ export const Stage = ({
         </Box>
       </Grid>
 
-      <Grid item xs={5} ref={scope1} sx={{ opacity: 0 }}>
+      <Grid item xs={5} ref={scope1}>
         {lStyle === false ? (
           <Box
             sx={{
@@ -112,7 +123,7 @@ export const Stage = ({
               alignItems: "center",
               backgroundColor: "#eaeaec",
               mt: 4,
-              pr: 2,
+              pl: 2,
               height: 50,
               borderRadius: 10,
             }}
@@ -131,7 +142,12 @@ export const Stage = ({
             }}
           >
             <Typography
-              sx={{ fontSize: 17, fontWeight: "bold", fontStyle: "italic" }}
+              sx={{
+                fontSize: 17,
+                fontWeight: "bold",
+                fontStyle: "italic",
+                color: "white",
+              }}
             >
               {titleR}
             </Typography>

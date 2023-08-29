@@ -16,4 +16,7 @@ export const Assests = {
     group_git: require("./Technologies/group_git.png"),
     group_react: require("./Technologies/group_react.png"),
   },
+  Projects: {
+    group_1: require("./Projects/group_1.jpeg"),
+  },
 };
