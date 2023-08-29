@@ -25,8 +25,8 @@ export const ContactPage = () => {
       }}
     >
       <Grid container>
-        <Grid item xs={1}></Grid>
-        <Grid item xs={7}>
+        <Grid item sm={1}></Grid>
+        <Grid item xs={12} sm={7}>
           <Box
             ref={scope}
             sx={{

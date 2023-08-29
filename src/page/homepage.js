@@ -22,18 +22,25 @@ export const HomePage = () => {
       id="home"
     >
       <Grid container>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={4}>
           <Box
             sx={{
-              height: "100vh",
-              position: "relative",
+              height: {
+                xs: "45vh",
+                sm: "100vh",
+              },
+              // position: "relative",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             <Typography
               sx={{
-                position: "absolute",
-                top: "40%",
-                left: "30%",
+                // position: "absolute",
+                // top: "40%",
+                // left: "30%",
                 fontFamily: "Source Code Pro",
                 fontSize: 20,
               }}
@@ -42,9 +49,9 @@ export const HomePage = () => {
             </Typography>
             <Typography
               sx={{
-                position: "absolute",
-                top: "45%",
-                left: "30%",
+                // position: "absolute",
+                // top: "45%",
+                // left: "30%",
                 fontSize: 45,
                 fontFamily: "Cinzel Decorative",
               }}
@@ -53,9 +60,12 @@ export const HomePage = () => {
             </Typography>
             <Typography
               sx={{
-                position: "absolute",
-                top: "56%",
-                left: "30%",
+                // position: "absolute",
+                // top: {
+                //   xs: "60%",
+                //   sm: "56%",
+                // },
+                // left: "30%",
                 fontFamily: "Source Code Pro",
                 fontSize: 30,
                 fontWeight: "bold",
@@ -68,13 +78,13 @@ export const HomePage = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={12} sm={8}>
           <Box
             sx={{
               border: "1px",
               borderRadius: "100% 0% 0% 100% / 100% 30% 70% 0% ",
               backgroundColor: "rgba(0, 0, 0, 0.8)",
-              height: "100vh",
+              height: { xs: "75vh", sm: "100vh" },
               position: "relative",
               overflow: "hidden",
             }}
@@ -82,8 +92,14 @@ export const HomePage = () => {
             <Box
               sx={{
                 position: "absolute",
-                top: "10%",
-                left: "40%",
+                top: {
+                  xs: "5%",
+                  sm: "10%",
+                },
+                left: {
+                  xs: "10%",
+                  sm: "40%",
+                },
                 opacity: 1.0,
               }}
             >

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import { Stage } from "../../../components/step";
 
 export const WorkExperience = () => {
+  const width = window.innerWidth;
+
   return (
     <Box sx={{ display: "flex", position: "relative" }}>
       <Box
@@ -18,7 +20,10 @@ export const WorkExperience = () => {
         sx={{
           backgroundColor: "#1e1e1f",
           width: "100%",
-          height: "50ch",
+          height: {
+            xs: "55ch",
+            sm: "50ch",
+          },
           borderRadius: "100% 0% 22% 78% / 100% 83% 17% 0% ",
           position: "absolute",
           left: "0%",
@@ -40,17 +45,36 @@ export const WorkExperience = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Stage
-          titleL="Associate Software Engineer"
-          titleR="Aug 2023 - Present"
-          duration={3}
-        ></Stage>
-        <Stage
-          titleL="Jan 2023 - Aug 2023"
-          titleR="Intern Software Engineer"
-          lStyle={false}
-          duration={2}
-        ></Stage>
+        {width < 600 ? (
+          <Stage
+            titleL="Ascte Software E."
+            titleR="Aug 2023 - Present"
+            duration={3}
+          ></Stage>
+        ) : (
+          <Stage
+            titleL="Associate Software Engineer"
+            titleR="Aug 2023 - Present"
+            duration={3}
+          ></Stage>
+        )}
+
+        {width < 600 ? (
+          <Stage
+            titleL="Jan 2023 - Aug 2023"
+            titleR="Intrn Software E."
+            lStyle={false}
+            duration={2}
+          ></Stage>
+        ) : (
+          <Stage
+            titleL="Jan 2023 - Aug 2023"
+            titleR="Intern Software Engineer"
+            lStyle={false}
+            duration={2}
+          ></Stage>
+        )}
+
         <Stage
           titleL="Resume"
           titleR="2023"

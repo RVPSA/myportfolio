@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Avatar, Box, Grid, Typography } from "@mui/material";
 import { Para } from "../para";
 import { useAnimate, useInView } from "framer-motion";
@@ -41,7 +41,7 @@ export const Stage = ({
 
   return (
     <Grid container>
-      <Grid item xs={5} ref={scope} sx={{ opacity: 0 }}>
+      <Grid item sm={5} xs ref={scope} sx={{ opacity: 0 }}>
         {lStyle ? (
           <Box
             sx={{
@@ -82,7 +82,7 @@ export const Stage = ({
         )}
       </Grid>
 
-      <Grid item xs={1} ref={scopeA} sx={{ opacity: 0 }}>
+      <Grid item sm={1} xs ref={scopeA} sx={{ opacity: 0 }}>
         <Box
           sx={{
             display: "flex",
@@ -114,7 +114,7 @@ export const Stage = ({
         </Box>
       </Grid>
 
-      <Grid item xs={5} ref={scope1}>
+      <Grid item sm={5} xs ref={scope1}>
         {lStyle === false ? (
           <Box
             sx={{

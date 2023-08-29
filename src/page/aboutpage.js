@@ -60,34 +60,34 @@ export const AboutPage = () => {
           </Grid>
           <Grid item xs={5}></Grid>
 
-          <Grid item xs={1}></Grid>
-          <Grid item xs={3}>
+          <Grid item sm={1}></Grid>
+          <Grid item xs sm={3}>
             <SkillCard title1="Frontend" title2="Developer" duration={1}>
               <CodeIcon sx={{ fontSize: 50, color: "white" }}></CodeIcon>
             </SkillCard>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs sm={3}>
             <SkillCard title1="Backend" title2="Developer" duration={2}>
               <DataObjectIcon
                 sx={{ fontSize: 50, color: "white" }}
               ></DataObjectIcon>
             </SkillCard>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs sm={3}>
             <SkillCard title1="UI/UX" title2="Designer" duration={3}>
               <ArchitectureIcon
                 sx={{ fontSize: 50, color: "white" }}
               ></ArchitectureIcon>
             </SkillCard>
           </Grid>
-          <Grid item xs={1}></Grid>
+          <Grid item sm={1}></Grid>
         </Grid>
       </Box>
       <Box
         sx={{
-          height: "50vh",
+          // height: "50vh",
           backgroundImage: `url(${Assests.Tech.group_1})`,
-          pb: 2,
+          pb: 4,
         }}
       >
         <Grid container>
@@ -105,7 +105,8 @@ export const AboutPage = () => {
             </Typography>
           </Grid>
           <Grid item xs={5}></Grid>
-          <Grid item xs={1}></Grid>
+
+          <Grid item sm={1}></Grid>
           <Grid item>
             <Ball>
               <img src={Assests.Technologies.group_C} alt="c#"></img>
