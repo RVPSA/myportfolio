@@ -9,12 +9,12 @@ import { HomePage } from "../page/homepage";
 const Route = () => {
   return (
     <>
-      <NavigationBar></NavigationBar>
+      {/* <NavigationBar></NavigationBar> */}
       <HomePage></HomePage>
       <AboutPage></AboutPage>
       <ProjectPage></ProjectPage>
       {/* <PublicationPage></PublicationPage> */}
-      {/* <ContactPage></ContactPage> */}
+      <ContactPage></ContactPage>
     </>
   );
 };

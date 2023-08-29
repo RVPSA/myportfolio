@@ -1,8 +1,8 @@
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import { WorkExperience } from "./collection/workExperience";
 import { Assests } from "../../Assests/Images";
-import { Para } from "../../components/para";
+
 import { ProjectCard } from "./collection/projectCard";
 
 export const ProjectPage = () => {

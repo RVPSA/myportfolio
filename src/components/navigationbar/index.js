@@ -30,7 +30,7 @@ export const NavigationBar = () => {
             <Link to="publication" smooth={true} offset={-430} duration={500}>
               <Typography>Publications</Typography>
             </Link>
-            <Link to="contact" smooth={true} offset={-430} duration={500}>
+            <Link to="contact" smooth={true} offset={-75} duration={500}>
               <Typography>Contact</Typography>
             </Link>
           </Box>
