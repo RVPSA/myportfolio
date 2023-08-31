@@ -45,6 +45,7 @@ export const ProjectPage = () => {
           many features"
                 fromL={true}
                 duration={4}
+                plink={"https://github.com/RVPSA/school_management_fe"}
               />
             </Grid>
             <Grid item xs={1}></Grid>
@@ -55,22 +56,32 @@ export const ProjectPage = () => {
                 description="This Application can generate real-time sinhala subtitle for sinhala speech using speech recognition"
                 fromL={true}
                 duration={6}
+                plink={
+                  "https://github.com/RVPSA/researchApplication/tree/sub-branch-1"
+                }
               />
             </Grid>
             <Grid item xs={1}></Grid>
             <Grid item xs={11}>
               <ProjectCard
                 image={Assests.Projects.group_1}
+                title="Personal Robot Photographer"
+                description="Made a robot who can capture photos and record videos with face
+                tracking"
                 fromL={false}
                 duration={4}
+                plink={"https://github.com/RVPSA/Personal_Photographer"}
               />
             </Grid>
             <Grid item xs={1}></Grid>
             <Grid item xs={11}>
               <ProjectCard
                 image={Assests.Projects.group_1}
+                title="Real-Time Updating Medical Dashboard"
+                description="Using IOT sensors obtain data and display on Real Time Dashboard"
                 fromL={false}
                 duration={6}
+                plink={"https://github.com/RVPSA/dashboard"}
               />
             </Grid>
           </>
@@ -85,6 +96,7 @@ export const ProjectPage = () => {
           many features"
                 fromL={true}
                 duration={4}
+                plink={"https://github.com/RVPSA/school_management_fe"}
               />
             </Grid>
             <Grid item xs>
@@ -94,20 +106,30 @@ export const ProjectPage = () => {
                 description="This Application can generate real-time sinhala subtitle for sinhala speech using speech recognition"
                 fromL={true}
                 duration={6}
+                plink={
+                  "https://github.com/RVPSA/researchApplication/tree/sub-branch-1"
+                }
               />
             </Grid>
             <Grid item xs>
               <ProjectCard
                 image={Assests.Projects.group_1}
+                title="Personal Robot Photographer"
+                description="Made a robot who can capture photos and record videos with face
+                tracking"
                 fromL={false}
                 duration={4}
+                plink={"https://github.com/RVPSA/Personal_Photographer"}
               />
             </Grid>
             <Grid item xs>
               <ProjectCard
                 image={Assests.Projects.group_1}
+                title="Real-Time Updating Medical Dashboard"
+                description="Using IOT sensors obtain data and display on Real Time Dashboard"
                 fromL={false}
                 duration={6}
+                plink={"https://github.com/RVPSA/dashboard"}
               />
             </Grid>
           </>

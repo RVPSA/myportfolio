@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Link, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect } from "react";
 import { Para } from "../../../components/para";
@@ -10,6 +10,7 @@ export const ProjectCard = ({
   description,
   duration,
   fromL = true,
+  plink,
 }) => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, { once: true });
@@ -30,61 +31,74 @@ export const ProjectCard = ({
       }
     }
   }, [isInView, fromL]);
-
   return (
     <>
       {fromL ? (
-        <Box
-          ref={scope}
-          sx={{
-            width: 250,
-            height: 300,
-            backgroundImage: `url(${image})`,
-            borderRadius: 5,
-            display: "flex",
-            flexDirection: "column-reverse",
-            mb: 3,
-            opacity: 0,
-          }}
+        <Link
+          href={plink}
+          target="_blank"
+          rel="noreferrer"
+          style={{ textDecoration: "none", color: "black" }}
         >
           <Box
+            ref={scope}
             sx={{
-              backgroundColor: "rgba(76,76,76,0.7)",
-              height: 160,
+              width: 250,
+              height: 300,
+              backgroundImage: `url(${image})`,
               borderRadius: 5,
-              p: 3,
+              display: "flex",
+              flexDirection: "column-reverse",
+              mb: 3,
+              opacity: 0,
             }}
           >
-            <Typography sx={{ color: "white" }}>{title}</Typography>
-            <Para>{description}</Para>
+            <Box
+              sx={{
+                backgroundColor: "rgba(76,76,76,0.7)",
+                height: 160,
+                borderRadius: 5,
+                p: 3,
+              }}
+            >
+              <Typography sx={{ color: "white" }}>{title}</Typography>
+              <Para>{description}</Para>
+            </Box>
           </Box>
-        </Box>
+        </Link>
       ) : (
-        <Box
-          ref={scope}
-          sx={{
-            width: 250,
-            height: 300,
-            backgroundImage: `url(${image})`,
-            borderRadius: 5,
-            display: "flex",
-            flexDirection: "column-reverse",
-            mb: 3,
-            opacity: 0,
-          }}
+        <Link
+          href={plink}
+          target="_blank"
+          rel="noreferrer"
+          style={{ textDecoration: "none", color: "black" }}
         >
           <Box
+            ref={scope}
             sx={{
-              backgroundColor: "rgba(76,76,76,0.7)",
-              height: 160,
+              width: 250,
+              height: 300,
+              backgroundImage: `url(${image})`,
               borderRadius: 5,
-              p: 3,
+              display: "flex",
+              flexDirection: "column-reverse",
+              mb: 3,
+              opacity: 0,
             }}
           >
-            <Typography sx={{ color: "white" }}>{title}</Typography>
-            <Para>{description}</Para>
+            <Box
+              sx={{
+                backgroundColor: "rgba(76,76,76,0.7)",
+                height: 160,
+                borderRadius: 5,
+                p: 3,
+              }}
+            >
+              <Typography sx={{ color: "white" }}>{title}</Typography>
+              <Para>{description}</Para>
+            </Box>
           </Box>
-        </Box>
+        </Link>
       )}
     </>
   );
