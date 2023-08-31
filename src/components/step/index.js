@@ -13,6 +13,7 @@ export const Stage = ({
   bdivder = true,
   lStyle = true,
   duration,
+  delay = 0.25,
 }) => {
   const [scope, animate] = useAnimate();
   const [scope1, animate1] = useAnimate();
@@ -24,17 +25,17 @@ export const Stage = ({
       animate(
         scope.current,
         { opacity: 1, x: [-1500, 0] },
-        { duration: duration, delay: 0.25, type: "spring" }
+        { duration: duration, delay: delay, type: "spring" }
       );
       animate1(
         scope1.current,
         { opacity: 1, x: [1500, 0] },
-        { duration: duration, delay: 0.25, type: "spring" }
+        { duration: duration, delay: delay, type: "spring" }
       );
       animateA(
         scopeA.current,
         { opacity: [0, 0.3, 0.5, 1] },
-        { duration: duration, delay: 0.25 }
+        { duration: duration, delay: delay }
       );
     }
   }, [isInView]);
